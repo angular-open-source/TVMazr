@@ -1,0 +1,18 @@
+<mat-card class="article-card">
+  <mat-card-header>
+      <mat-card-title>{{ episode.name}}</mat-card-title>
+      <mat-card-subtitle> Season: {{ episode.season }} | Chapter {{ episode.number }} </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image alt="Image for {{episode.name}}}" [src]="episode.image"/>
+
+  <mat-card-content>
+    <p><strong>ID:</strong> {{ episode.id }}</p>
+    <p><strong>Summary:</strong> {{ episode.summary }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <a [href]="episode.url" target="_blank">
+      <button mat-button>Watch Episode</button>
+    </a>
+  </mat-card-actions>
+</mat-card>
